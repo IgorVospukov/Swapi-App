@@ -4,17 +4,16 @@ import {useDispatch, useSelector} from 'react-redux';
 import {getFilms} from '../asyncActions/getFilms';
 
 const Page4 = ({navigation}) => {
-  const [page, setPage] = useState(1);
+  const [page2, setPage] = useState(1);
   const Data = useSelector(state => state.reducerFilms.mydata);
-  console.log('im from', Data);
   const LoadMoreData = () => {
-    setPage(page + 1);
+    setPage(page2 + 1);
   };
   const dispatch = useDispatch();
   useEffect(() => {
-    const loadDispatch1 = () => dispatch(getFilms(page));
+    const loadDispatch1 = () => dispatch(getFilms(page2));
     loadDispatch1();
-  }, [page]);
+  }, [page2]);
 
   const loadOneFilm = item => {
     navigation.navigate('Page5', {
@@ -57,7 +56,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   forText: {
-    height: 40,
+    height: 100,
     justifyContent: 'center',
     alignItems: 'center',
   },

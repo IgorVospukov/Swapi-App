@@ -5,7 +5,6 @@ import {getPeople} from '../asyncActions/getPeople';
 const Page2 = ({navigation}) => {
   const [page, setPage] = useState(1);
   const Data = useSelector(state => state.reducerPeople.mydata);
-  console.log('im from', Data);
   const LoadMoreData = () => {
     setPage(page + 1);
   };

@@ -4,7 +4,7 @@ import {addPeople} from '../redux/actions';
 export const getPeople = page => {
   return dispatch => {
     let url =
-      page === undefined
+      page === undefined || null
         ? 'https://swapi.dev/api/people/'
         : `https://swapi.dev/api/people/?page=${page}`;
     axios

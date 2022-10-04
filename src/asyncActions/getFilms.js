@@ -4,7 +4,7 @@ import {addFilms} from '../redux/actions';
 export const getFilms = page => {
   return dispatch => {
     let url =
-      page === undefined
+      page === undefined || null
         ? 'https://swapi.dev/api/films/'
         : `https://swapi.dev/api/films/?page=${page}`;
     axios
