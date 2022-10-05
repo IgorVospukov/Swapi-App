@@ -7,7 +7,7 @@ export default (state = INITIAL_STATE, action) => {
     case SWAPI_FILMS:
       return {
         ...state,
-        mydata: [...new Set(state.mydata), ...new Set(action.payload.results)],
+        mydata: [...state.mydata, ...new Set(action.payload.results)],
       };
     default:
       return state;

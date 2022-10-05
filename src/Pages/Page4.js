@@ -1,14 +1,13 @@
 import {StyleSheet, Text, View, FlatList, Pressable} from 'react-native';
-import React, {useState, useEffect} from 'react';
+import React, {useLayoutEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {getFilms} from '../asyncActions/getFilms';
 
 const Page4 = ({navigation}) => {
   const dispatch = useDispatch();
   const Data = useSelector(state => state.reducerFilms.mydata);
-  console.log('page4', Data);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const loadFilms = () => dispatch(getFilms());
     loadFilms();
   }, []);

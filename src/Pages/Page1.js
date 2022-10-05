@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {View, Text, StyleSheet, Pressable} from 'react-native';
 import {useDispatch} from 'react-redux';
 import {getPeople} from '../asyncActions/getPeople';
-import {getFilms} from '../asyncActions/getFilms';
 import {useNavigation} from '@react-navigation/native';
 import LottieView from 'lottie-react-native';
 
@@ -10,7 +9,6 @@ const Page1 = () => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const [pagePeople, setPagePeople] = useState(0);
-  const [pageFilms, setPageFilms] = useState(0);
 
   const addAndGoFilms = () => {
     const loadScreen4 = () => {
