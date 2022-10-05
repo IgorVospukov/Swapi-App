@@ -18,6 +18,7 @@ const Page1 = () => {
     };
     loadScreen4();
   };
+
   const addAndGoPeople = () => {
     const loadScreen2 = () => {
       const loadDispatch2 = () => dispatch(getPeople(pagePeople));
