@@ -7,10 +7,12 @@ const Page4 = ({navigation}) => {
   const dispatch = useDispatch();
   const Data = useSelector(state => state.reducerFilms.mydata);
   console.log('page4', Data);
+  const [dataFilms, setDataFilms] = useState([]);
 
   useEffect(() => {
-    const loadDispatch = () => dispatch(getFilms());
-    loadDispatch();
+    const loadFilms = () => dispatch(getFilms());
+    loadFilms();
+    setDataFilms(loadFilms);
   }, [dispatch]);
 
   const loadOneFilm = item => {
@@ -35,7 +37,7 @@ const Page4 = ({navigation}) => {
       <FlatList
         data={Data}
         renderItem={renderItem}
-        keyExtractor={(item, index) => index}
+        keyExtractor={(item, index) => item.title}
       />
     </View>
   );
