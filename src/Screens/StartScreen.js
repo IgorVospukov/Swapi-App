@@ -5,7 +5,7 @@ import {getPeople} from '../asyncActions/getPeople';
 import {useNavigation} from '@react-navigation/native';
 import LottieView from 'lottie-react-native';
 
-const Page1 = () => {
+const StartScreen = () => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const [pagePeople, setPagePeople] = useState(0);
@@ -76,4 +76,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Page1;
+export default StartScreen;

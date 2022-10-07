@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {addFilms} from '../redux/actions';
 
-export const getFilms = page => {
+export const getFilms = () => {
   return dispatch => {
     axios
       .get('https://swapi.dev/api/films/')

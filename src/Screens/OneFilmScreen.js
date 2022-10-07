@@ -2,7 +2,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import LottieView from 'lottie-react-native';
 
-const Page5 = ({route}) => {
+const OneFilmScreen = ({route}) => {
   const nameFilm = route.params.nameFilm;
   const director = route.params.director;
   const dateFilm = route.params.dateFilm;
@@ -23,7 +23,7 @@ const Page5 = ({route}) => {
   );
 };
 
-export default Page5;
+export default OneFilmScreen;
 
 const styles = StyleSheet.create({
   forFilm: {

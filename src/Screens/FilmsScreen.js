@@ -3,7 +3,7 @@ import React, {useLayoutEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {getFilms} from '../asyncActions/getFilms';
 
-const Page4 = ({navigation}) => {
+const FilmsScreen = ({navigation}) => {
   const dispatch = useDispatch();
   const Data = useSelector(state => state.reducerFilms.mydata);
 
@@ -40,7 +40,7 @@ const Page4 = ({navigation}) => {
   );
 };
 
-export default Page4;
+export default FilmsScreen;
 
 const styles = StyleSheet.create({
   containName: {

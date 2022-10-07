@@ -2,7 +2,7 @@ import {StyleSheet, Text, View, FlatList, Pressable} from 'react-native';
 import React, {useState, useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {getPeople} from '../asyncActions/getPeople';
-const Page2 = ({navigation}) => {
+const PeopleScreen = ({navigation}) => {
   const [page, setPage] = useState(1);
   const Data = useSelector(state => state.reducerPeople.mydata);
   console.log('page2', Data);
@@ -45,7 +45,7 @@ const Page2 = ({navigation}) => {
   );
 };
 
-export default Page2;
+export default PeopleScreen;
 
 const styles = StyleSheet.create({
   containName: {

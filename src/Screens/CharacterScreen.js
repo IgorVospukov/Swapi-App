@@ -2,7 +2,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import LottieView from 'lottie-react-native';
 
-const Page3 = ({route}) => {
+const CharacterScreen = ({route}) => {
   const namePeople = route.params.namePeople;
   const mass = route.params.mass;
   const height = route.params.height;
@@ -23,7 +23,7 @@ const Page3 = ({route}) => {
   );
 };
 
-export default Page3;
+export default CharacterScreen;
 
 const styles = StyleSheet.create({
   forPeopll: {
